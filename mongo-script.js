@@ -1,0 +1,1 @@
+rs.initiate({"_id" : "mongo-repl","members" : [{"_id" : 0,"host" : "localhost:27017"},{"_id" : 1,"host" : "localhost:27018"}]})
