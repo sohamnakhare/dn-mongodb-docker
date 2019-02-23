@@ -87,7 +87,7 @@ RUN set -x \
 
 RUN mkdir -p /data/db/data1 /data/db/data2 /data/configdb \
 	&& chown -R mongodb:mongodb /data/db /data/configdb
-VOLUME /data/db/data1 /data/db/data2 /data/configdb
+VOLUME /data/db/data1 /data/db/data2 /data/configdb /home/ubuntu/data_1 /home/ubuntu/data_2
 
 COPY docker-entrypoint.sh /usr/local/bin/
 COPY wrapper-script.sh /usr/local/bin/
@@ -96,5 +96,6 @@ COPY mongo-script.js /usr/local/bin/
 ENTRYPOINT ["docker-entrypoint.sh"]
 
 EXPOSE 27017
+EXPOSE 27018
 
 CMD ["wrapper-script.sh"]
