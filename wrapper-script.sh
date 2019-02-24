@@ -1,5 +1,5 @@
-mongod --port 27017 --dbpath /home/ubuntu/data_1 --smallfiles --replSet mongo-repl --bind_ip 0.0.0.0 &
-mongod --port 27018 --dbpath /home/ubuntu/data_2 --smallfiles --replSet mongo-repl --bind_ip 0.0.0.0
+mongod --port 27017 --dbpath /data/db/data1 --smallfiles --replSet mongo-repl --bind_ip 0.0.0.0 &
+mongod --port 27018 --dbpath /data/db/data2 --smallfiles --replSet mongo-repl --bind_ip 0.0.0.0
 
 status=$?
 if [ $status -ne 0 ]; then

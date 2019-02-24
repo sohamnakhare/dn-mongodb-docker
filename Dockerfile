@@ -87,7 +87,7 @@ RUN set -x \
 
 RUN mkdir -p /data/db/data1 /data/db/data2 /data/configdb \
 	&& chown -R mongodb:mongodb /data/db /data/configdb
-VOLUME /data/db/data1 /data/db/data2 /data/configdb /home/ubuntu/data_1 /home/ubuntu/data_2
+VOLUME /data/db/data1 /data/db/data2 /data/configdb
 
 COPY docker-entrypoint.sh /usr/local/bin/
 COPY wrapper-script.sh /usr/local/bin/
